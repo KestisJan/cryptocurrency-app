@@ -17,7 +17,7 @@ const NavBar = () => {
                     <MenuOutlined />
                 </Button>
             </div>
-            <Menu theme='dark'>
+            <Menu theme='blue'>
                 <Menu.Item icon={<HomeOutlined />}>
                     <Link to='/'>Home</Link>
                 </Menu.Item>

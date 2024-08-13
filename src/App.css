@@ -1,0 +1,356 @@
+:root {
+    --text-primary: #2c3e50;
+    --bg-primary: #ecf0f1;
+    --bg-secondary: #ffffff;
+    --accent-primary: #e74c3c;
+    --accent-secondary: #3498db;
+    --border: #bdc3c7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+a:hover {
+    color: var(--accent-primary);
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.navbar {
+    flex: 0.2;
+    background-color: var(--accent-secondary);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--accent-secondary);
+    color: white;
+    width: 20%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--accent-secondary);
+}
+
+.logo {
+    margin-left: 15px;
+}
+
+.logo a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.menu-control-container {
+    display: none;
+}
+
+.main {
+    flex: 0.8;
+    background-color: var(--bg-primary);
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; 
+}
+
+.routes {
+    padding: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .app {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex: 1;
+    }
+
+    .main {
+        margin-top: 70px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .nav-container {
+        position: fixed;
+        width: 100%;
+        height: 70px;
+    }
+
+    .menu-control-container {
+        display: block;
+    }
+}
+
+.coin-detail-container {
+    margin: 20px;
+}
+
+.coin-heading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
+    text-align: center; 
+}
+
+.coin-heading-container .coin-name {
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.coin-heading-container p {
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.stats-container h2 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--accent-primary);
+}
+
+.coin-details-heading {
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.coin-stats {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    padding: 15px;
+    background-color: var(--bg-secondary);
+}
+
+.coin-stats-name {
+    font-size: 1rem;
+}
+
+.stats {
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.coin-desc-link {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.coin-desc-link h2 {
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.coin-desc-link p {
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.coin-desc-link a {
+    color: var(--accent-primary);
+}
+
+.coin-desc-link h3 {
+    font-weight: 700;
+}
+
+.coin-desc {
+    flex: 1;
+}
+
+.coin-links {
+    flex: 1;
+}
+
+.coin-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding: 15px;
+}
+
+.link-name {
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.coin-link a {
+    color: var(--accent-primary);
+}
+
+.coin-link:hover, .coin-stats:hover {
+    background-color: var(--bg-secondary);
+}
+
+@media screen and (max-width: 1000px) {
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .coin-desc-link {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .coin-links {
+        padding: 0;
+    }
+
+    .coin-detail-container {
+        margin: 0;
+    }
+
+    .heading {
+        margin-top: 20px;
+    }
+}
+
+.select-news {
+    width: 200px;
+}
+
+.news-card {
+    min-height: 300px;
+}
+
+.news-image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-title {
+    width: 70%;
+}
+
+.news-image-container .img {
+    width: 100px;
+    height: 100px;
+}
+
+.news-card p {
+    color: var(--text-primary);
+    margin: 10px 0;
+}
+
+.provider-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.provider-name {
+    margin-left: 10px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--accent-primary);
+}
+
+.chart-title {
+    color: var(--accent-primary);
+}
+
+.price-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.price-change {
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.current-price {
+    font-weight: 700;
+}
+
+.home-heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.show-more {
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.exchange-image {
+    margin: 0 10px;
+}
+
+.search-crypto {
+    margin: 20px auto;
+    width: 250px;
+}
+
+.crypto-card-container {
+    min-height: 65vh;
+}
+
+.crypto-card {
+    min-width: 250px;
+}
+
+.crypto-card .crypto-image {
+    width: 35px;
+}
+
+.select-timeperiod {
+    width: 200px;
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: var(--accent-secondary);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    color: white;
+}

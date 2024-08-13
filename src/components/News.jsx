@@ -10,7 +10,7 @@ const News = (simplified) => {
     const { data: cryptoNews, isLoading } = useGetCryptoNewsQuery();
 
     if (isLoading) return 'Loading...'
-    const newsToShow = simplified ? cryptoNews.data.slice(0, 6) : cryptoNews.data;
+    const newsToShow = simplified ? cryptoNews.data.slice(0, 12) : cryptoNews.data;
 
 
     return (
